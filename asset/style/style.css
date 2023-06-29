@@ -369,7 +369,7 @@ nav {
 
   #rencontre {
     width: 60vw;
-    height: 70vh;
+    height: 60vh;
 
     background-color: white;
 
@@ -377,21 +377,22 @@ nav {
   }
 
   .prochain_match {
-    width: 100%;
+    width: 15%;
     height: 10%;
 
     display: flex;
     align-items: center;
-
-    margin-left: 5%;
+    justify-content: center;
 
     font-size: 115%;
     font-weight: 500;
+
+    background-color: aqua;
   }
 
   .info_horaire {
     width: 100%;
-    height: 20%;
+    height: 25%;
 
     display: flex;
     justify-content: center;
@@ -405,7 +406,7 @@ nav {
     width: 40%;
     height: 100%;
 
-    font-size: 115%;
+    font-size: 120%;
 
     display: flex;
     align-items: center;
@@ -416,15 +417,14 @@ nav {
   .date span {
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 65%;
     height: auto;
-    font-size: 120% !important;
     font-weight: 600;
   }
 
   #equipe {
     width: 100%;
-    height: 70%;
+    height: 65%;
 
     display: flex;
     justify-content: center;
@@ -452,7 +452,7 @@ nav {
       font-weight: 700;
     }
       .logo_equipe img {
-        width: 90%;
+        width: 80%;
       }
 
 
