@@ -641,6 +641,7 @@ nav {
             font-size: 120%;
             font-weight: 500;
 
+            mask-image: linear-gradient(270deg, transparent 20px, rgb(0, 0, 0) 200px);
             -webkit-mask-image: linear-gradient(270deg, transparent 20px, rgb(0, 0, 0) 200px);
 
             white-space: nowrap;
