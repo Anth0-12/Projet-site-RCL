@@ -591,7 +591,7 @@ nav {
 
     
 
-  .ligne1 {
+  .ligne_un {
     width: 80%;
     height: 45vh;
 
@@ -601,7 +601,7 @@ nav {
 
     gap: 10%;
   }
-    .article_un {
+    .article_ligne_un {
       width: 65%;
       height: 45vh;
 
@@ -615,15 +615,15 @@ nav {
       transform: scale(1);
       transition: 0.5s;
     }
-      .article_un:hover {
-        transform: scale(1.1);
+      .article_ligne_un:hover {
+        transform: scale(1.05);
         transition: 0.5s;
       }
-        .article_un a {
+        .article_ligne_un a {
           text-decoration: none;
           color: black;
         }
-          .image {
+          .image_article_un {
             background-image: url("/asset/img/prolong fofana.jpg");
             background-size: cover;
             /* box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245); */
@@ -631,10 +631,7 @@ nav {
             height: 100%;
             overflow: hidden;
           }
-          .image img {
-            width: 100%;
-          }
-          .titre {
+          .titre_article_un {
             width: 100%;
             height: 5vh;
 
@@ -647,7 +644,7 @@ nav {
             white-space: nowrap;
           }
 
-        .article_deux {
+        .news {
           width: 25%;
           height: 45vh;
 
@@ -655,8 +652,31 @@ nav {
           align-items: center;
           justify-content: center;
         }
+        .news a {
+          text-decoration: none;
+          color: #000000;
 
-.ligne2 {
+          font-size: 120%;
+          font-weight: 500;
+
+          transform: scale(1);
+          transition: 0.5s;
+        }
+        .news a:hover {
+          text-decoration: none;
+          color: #f90000;
+
+          font-size: 120%;
+          font-weight: 500;
+
+          transform: scale(1.1);
+          transition: 0.5s;
+        }
+        .news a::after {
+          content: ' >>';
+        }
+
+.ligne_deux {
     width: 80%;
     height: 35vh;
 
@@ -666,36 +686,63 @@ nav {
 
     gap: 5%;
 }
-    .article_trois {
-      background-color: white;
-      box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245);
+  .article_ligne_deux {
+    width: 30%;
+    height: 35vh;
 
-      width: 30%;
-      height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    transform: scale(1);
+    transition: 0.5s;
+
+    gap: 10px;
     }
-    .article_quatre {
-      background-color: white;
-      box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245);
+    .article_ligne_deux:hover {
+      transform: scale(1.05);
+      transition: 0.5s;
+      }
+      .article_ligne_deux a {
+        text-decoration: none;
+        color: black;
+      }
+      .image_article_deux {
+        background-image: url("/asset/img/stade\ bollaert.jpg");
+        background-size: cover;
+        /* box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245); */
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .image_article_trois {
+        background-image: url("/asset/img/supp\ lens.jpg");
+        background-size: cover;
+        /* box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245); */
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .image_article_quatre {
+        background-image: url("/asset/img/conf\ presse.jpg");
+        background-size: cover;
+        /* box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245); */
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .titre_article_deux {
+        width: 100%;
+        height: 5vh;
 
-      width: 30%;
-      height: 35vh;
+        font-size: 110%;
+        font-weight: 500;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .article_cinq {
-      background-color: white;
-      box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245);
+        mask-image: linear-gradient(270deg, transparent 20px, rgb(0, 0, 0) 200px);
+        -webkit-mask-image: linear-gradient(270deg, transparent 20px, rgb(0, 0, 0) 200px);
 
-      width: 30%;
-      height: 30vh;
+        white-space: nowrap;
+      }
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    
