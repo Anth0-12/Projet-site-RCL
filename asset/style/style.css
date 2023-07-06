@@ -531,7 +531,7 @@ nav {
 
 #articles {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
 
     gap: 5vh;
 
@@ -591,158 +591,289 @@ nav {
 
     
 
-  .ligne_un {
-    width: 80%;
-    height: 45vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 10%;
-  }
-    .article_ligne_un {
-      width: 65%;
+    .ligne_un {
+      width: 80%;
       height: 45vh;
-
+  
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
+  
+      gap: 10%;
 
-      gap: 10px;
-
-      transform: scale(1);
-      transition: 0.5s;
+      margin-bottom: 5vh;
     }
-      .article_ligne_un:hover {
-        transform: scale(1.05);
+      .article_ligne_un {
+        width: 65%;
+        height: 45vh;
+  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+  
+        gap: 10px;
+  
+        transform: scale(1);
         transition: 0.5s;
+  
+        background-image: url("/asset/img/prolong\ fofana.jpg");
+        background-size: cover;
       }
-        .article_ligne_un a {
-          text-decoration: none;
-          color: black;
+      .article_ligne_un a {
+        position: absolute;
+        
+        width: 100%;
+        height: 100%;
+      }
+        .article_ligne_un:hover {
+          transform: scale(1.05);
+          transition: 0.5s;
         }
-          .image_article_un {
-            background-image: url("/asset/img/prolong fofana.jpg");
-            background-size: cover;
-            /* box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245); */
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-          }
           .titre_article_un {
-            width: 100%;
-            height: 5vh;
-
+              width: 85%;
+              height: 30%;
+  
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              background-color: #ffffff;
+  
+              position: relative;
+              z-index: 1;
+              top: 50%;
+  
+              box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.350);
+          }
+              .titre_article_un a {
+                  width: 100%;
+                  height: 100%;
+  
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin:  0px 50px 0px 50px;
+  
+                  /* mask-image: linear-gradient(0deg, transparent 40px, rgb(0, 0, 0) 150px);
+                  -webkit-mask-image: linear-gradient(0deg, transparent 20px, rgb(0, 0, 0) 150px); */
+  
+                  /* white-space: nowrap; */ /* pour que le texte soit sur une seule ligne */
+                  
+  
+                  text-decoration: none;
+                  color: black;
+  
+                  font-size: 130%;
+                  font-weight: 500;
+              }
+                  .categorie_article_un {
+                      width: 30%;
+                      height: 10%;
+  
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+  
+                      background-color: #ff0303;
+  
+                      position: relative;
+                      z-index: 2;
+                      top: 12%;
+  
+                      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+                  }
+                      .categorie_article_un a {
+                          width: 100%;
+                          height: 100%;
+          
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin:  0px 50px 0px 50px;
+          
+                          text-decoration: none;
+                          color: rgb(255, 255, 255);
+          
+                          font-size: 120%;
+                          font-weight: 500;
+                      }
+  
+          .news {
+            width: 25%;
+            height: 45vh;
+  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .news a {
+            text-decoration: none;
+            color: #000000;
+  
             font-size: 120%;
             font-weight: 500;
-
-            mask-image: linear-gradient(270deg, transparent 20px, rgb(0, 0, 0) 200px);
-            -webkit-mask-image: linear-gradient(270deg, transparent 20px, rgb(0, 0, 0) 200px);
-
-            white-space: nowrap;
+  
+            transform: scale(1);
+            transition: 0.5s;
           }
-
-        .news {
-          width: 25%;
-          height: 45vh;
-
+          .news a:hover {
+            text-decoration: none;
+            color: #f90000;
+  
+            font-size: 120%;
+            font-weight: 500;
+  
+            transform: scale(1.1);
+            transition: 0.5s;
+          }
+          .news a::after {
+            content: ' >>';
+          }
+  
+  .ligne_deux {
+      width: 80%;
+      height: 35vh;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      gap: 5%;
+  }
+      .article_ligne_deux {
+          width: 30%;
+          height: 35vh;
+  
           display: flex;
           align-items: center;
           justify-content: center;
-        }
-        .news a {
-          text-decoration: none;
-          color: #000000;
-
-          font-size: 120%;
-          font-weight: 500;
-
+          flex-direction: column;
+  
+          gap: 10px;
+  
           transform: scale(1);
           transition: 0.5s;
-        }
-        .news a:hover {
-          text-decoration: none;
-          color: #f90000;
-
-          font-size: 120%;
-          font-weight: 500;
-
-          transform: scale(1.1);
+  
+          background-image: url("/asset/img/stade\ bollaert.jpg");
+          background-size: cover;
+      }
+      .article_ligne_deux > a, .article_ligne_trois > a, .article_ligne_quatre > a {
+        position: absolute;
+        
+        width: 100%;
+        height: 100%;
+      }
+          .article_ligne_deux:hover {
+              transform: scale(1.05);
+              transition: 0.5s;
+          }
+      .article_ligne_trois {
+          width: 30%;
+          height: 35vh;
+  
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+  
+          gap: 10px;
+  
+          transform: scale(1);
           transition: 0.5s;
-        }
-        .news a::after {
-          content: ' >>';
-        }
-
-.ligne_deux {
-    width: 80%;
-    height: 35vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 5%;
-}
-  .article_ligne_deux {
-    width: 30%;
-    height: 35vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    transform: scale(1);
-    transition: 0.5s;
-
-    gap: 10px;
-    }
-    .article_ligne_deux:hover {
-      transform: scale(1.05);
-      transition: 0.5s;
+  
+          background-image: url("/asset/img/supp\ lens.jpg");
+          background-size: cover;
       }
-      .article_ligne_deux a {
-        text-decoration: none;
-        color: black;
+          .article_ligne_trois:hover {
+              transform: scale(1.05);
+              transition: 0.5s;
+          }
+      .article_ligne_quatre {
+          width: 30%;
+          height: 35vh;
+  
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+  
+          gap: 10px;
+  
+          transform: scale(1);
+          transition: 0.5s;
+  
+          background-image: url("/asset/img/conf\ presse.jpg");
+          background-size: cover;
       }
-      .image_article_deux {
-        background-image: url("/asset/img/stade\ bollaert.jpg");
-        background-size: cover;
-        /* box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245); */
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-      }
-      .image_article_trois {
-        background-image: url("/asset/img/supp\ lens.jpg");
-        background-size: cover;
-        /* box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245); */
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-      }
-      .image_article_quatre {
-        background-image: url("/asset/img/conf\ presse.jpg");
-        background-size: cover;
-        /* box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245); */
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-      }
-      .titre_article_deux {
-        width: 100%;
-        height: 5vh;
-
-        font-size: 110%;
-        font-weight: 500;
-
-        mask-image: linear-gradient(270deg, transparent 20px, rgb(0, 0, 0) 200px);
-        -webkit-mask-image: linear-gradient(270deg, transparent 20px, rgb(0, 0, 0) 200px);
-
-        white-space: nowrap;
-      }
+          .article_ligne_quatre:hover {
+          transform: scale(1.05);
+          transition: 0.5s;
+          }
+          .titre_article_deux {
+              width: 85%;
+              height: 30%;
+  
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              background-color: #ffffff;
+  
+              position: relative;
+              z-index: 1;
+              top: 50%;
+  
+              box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.350);
+          }
+              .titre_article_deux a {
+                  width: 100%;
+                  height: 100%;
+  
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin:  0px 50px 0px 50px;
+  
+                  mask-image: linear-gradient(0deg, transparent 40px, rgb(0, 0, 0) 150px);
+                  -webkit-mask-image: linear-gradient(0deg, transparent 10px, rgb(0, 0, 0) 30px);
+  
+                  text-decoration: none;
+                  color: black;
+  
+                  font-size: 110%;
+                  font-weight: 400;
+              }
+                  .categorie_article_deux {
+                      width: 30%;
+                      height: 10%;
+  
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+  
+                      background-color: #ff0303;
+  
+                      position: relative;
+                      z-index: 2;
+                      top: 12%;
+  
+                      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+                  }
+                      .categorie_article_deux a {
+                          width: 100%;
+                          height: 100%;
+          
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          margin:  0px 50px 0px 50px;
+          
+                          text-decoration: none;
+                          color: rgb(255, 255, 255);
+          
+                          font-size: 110%;
+                          font-weight: 400;
+                      }
 
     
