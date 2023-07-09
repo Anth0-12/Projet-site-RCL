@@ -941,8 +941,8 @@ nav {
     }
 
     .grid-container {
-      -moz-columns: 3 300px;
-           columns: 3 300px;
+      -moz-columns: 3 200px;
+           columns: 3 200px;
       -moz-column-gap: 1.5rem;
            column-gap: 1.5rem;
       width: 60%;
