@@ -540,7 +540,7 @@ nav {
     justify-content: center;
     flex-direction: column;
 
-    margin-bottom: 5%;
+    margin-bottom: 2%;
   }
 
   .actu {
@@ -894,7 +894,7 @@ nav {
   width: 25%;
   height: 5vh;
 
-  margin-bottom: 5vh;
+  margin-bottom: 6vh;
 
   position: relative;
   right: 23%;
@@ -940,15 +940,17 @@ nav {
       transform: skewX(-20deg);
     }
 
-#ligne_tweet {
-  display: flex;
+    .grid-container {
+      -moz-columns: 3 300px;
+           columns: 3 300px;
+      -moz-column-gap: 1.5rem;
+           column-gap: 1.5rem;
+      width: 60%;
+    }
 
-  gap: 50px;
-}
+    .twitter-tweet {
+      border-radius: 12px ;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.275);
 
-.twitter-tweet {
-  width: 35vw;
-
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.275);
-  border-radius: 12px;
-}
+      margin-top: 0 !important;
+    }
