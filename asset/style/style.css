@@ -541,6 +541,7 @@ header nav #connexion a:hover, #menu nav #connexion a:hover, #logo nav #connexio
   align-items: center;
   justify-content: center;
   margin: 0px 50px 0px 50px;
+  background-color: #ff0303;
   /* mask-image: linear-gradient(0deg, transparent 40px, rgb(0, 0, 0) 150px);
   -webkit-mask-image: linear-gradient(0deg, transparent 20px, rgb(0, 0, 0) 150px); */
   /* white-space: nowrap; */ /* pour que le texte soit sur une seule ligne */
