@@ -625,7 +625,7 @@ header nav #connexion a:hover, #menu nav #connexion a:hover, #logo nav #connexio
   gap: 10px;
   transform: scale(1);
   transition: 0.5s;
-  background-image: url("/asset/img/stade_bollaert.jpg");
+  background-image: url("asset/img/stade_bollaert.jpg");
   background-size: cover;
 }
 
@@ -650,7 +650,7 @@ header nav #connexion a:hover, #menu nav #connexion a:hover, #logo nav #connexio
   gap: 10px;
   transform: scale(1);
   transition: 0.5s;
-  background-image: url("/asset/img/supp_lens.jpg");
+  background-image: url(asset/img/supp_lens.jpg);
   background-size: cover;
 }
 
