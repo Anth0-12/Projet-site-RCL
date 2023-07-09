@@ -630,7 +630,7 @@
          transform: scale(1);
          transition: 0.5s;
    
-         background-image: url("/asset/img/prolong_fofana.jpg");
+         background-image: url("../img/prolong_fofana.jpg");
          background-size: cover;
        }
        .article_ligne_un a {
@@ -768,7 +768,7 @@
            transform: scale(1);
            transition: 0.5s;
    
-           background-image: url("/asset/img/stade_bollaert.jpg");
+           background-image: url("../img/stade_bollaert.jpg");
            background-size: cover;
        }
        .article_ligne_deux > a, .article_ligne_trois > a, .article_ligne_quatre > a {
@@ -795,7 +795,7 @@
            transform: scale(1);
            transition: 0.5s;
    
-           background-image: url("/asset/img/supp_lens.jpg");
+           background-image: url("../img/supp_lens.jpg");
            background-size: cover;
        }
            .article_ligne_trois:hover {
@@ -816,7 +816,7 @@
            transform: scale(1);
            transition: 0.5s;
    
-           background-image: url("/asset/img/conf_presse.jpg");
+           background-image: url("../img/conf_presse.jpg");
            background-size: cover;
        }
            .article_ligne_quatre:hover {
