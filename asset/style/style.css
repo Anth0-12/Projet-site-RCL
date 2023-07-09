@@ -366,7 +366,7 @@ nav {
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 7%;
+    margin-bottom: 5%;
   }
 
   #rencontre {
@@ -540,7 +540,7 @@ nav {
     justify-content: center;
     flex-direction: column;
 
-    margin-bottom: 2%;
+    margin-bottom: 5%;
   }
 
   .actu {
