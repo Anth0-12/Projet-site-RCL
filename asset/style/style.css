@@ -506,7 +506,7 @@ header nav #connexion a:hover, #menu nav #connexion a:hover, #logo nav #connexio
   gap: 10px;
   transform: scale(1);
   transition: 0.5s;
-  background-image: url("./asset/img/prolong fofana.jpg");
+  background-image: url(/asset/img/prolong_fofana.jpg);
   background-size: cover;
 }
 
