@@ -370,172 +370,340 @@
  /*---------------------- prochain match ------------------------*/
  
  #prochain_match {
-     width: 100%;
-     height: 70vh;
- 
-     display: flex;
-     align-items: center;
-     justify-content: center;
- 
-     margin-bottom: 5%;
-   }
- 
-   #rencontre {
-     width: 60vw;
-     height: 60vh;
- 
-     background-color: white;
- 
-     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245);
-   }
- 
-   .prochain_match {
-     position: relative;
- 
-     width: 15%;
-     height: 10%;
- 
-     display: flex;
-     align-items: center;
-     justify-content: center;
- 
-     background-color: #f90000;
-     overflow: visible;
-     z-index: 1;
- 
-     font-size: 115%;
-     font-weight: 500;
-     color: white;
-   }
-     .prochain_match:after {
-       content: '';
- 
-       width: 100%;
-       height: 100%;
- 
-       position: absolute;
-       background: inherit;
-       z-index: -1;
-       top: 0;
-       
-       transform-origin: left bottom;
-       transform: skewX(-20deg);
-       }
- 
-   .info_horaire {
-     width: 100%;
-     height: 25%;
- 
-     display: flex;
-     justify-content: center;
-     align-items: center;
-   }
-     .info_horaire img {
-       height: 70%;
-     }
- 
-   .date {
-     width: 40%;
-     height: 100%;
- 
-     font-size: 120%;
- 
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
-   }
- 
-   .date span {
-     display: flex;
-     justify-content: center;
-     width: 65%;
-     height: auto;
-     font-weight: 600;
-   }
- 
-   #equipe {
-     width: 100%;
-     height: 65%;
- 
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
-   }
- 
-   #logo_equipe {
-     width: 100%;
-     height: 50%;
- 
-     display: flex;
-     justify-content: center;
-     align-items: center;
-   }
-     .logo_equipe {
-       width: 20%;
-       height: 100%;
- 
-       display: flex;
-       justify-content: center;
-       align-items: center;
- 
-       font-size: 400%;
-       font-weight: 700;
-     }
-       .logo_equipe img {
-         width: 80%;
-       }
- 
- 
-   #nom_equipe {
-     width: 100%;
-     height: 10%;
- 
-     display: flex;
-     justify-content: center;
- 
-     gap: 20%;
-     margin-bottom: 2%;
-   }
-     .nom_equipe {
-       width: 20%;
-       height: 100%;
- 
-       display: flex;
-       justify-content: center;
-       align-items: center;
- 
-       font-size: 140%;
-       font-weight: 600;
-     }
- 
- 
-   #pari_equipe {
-     width: 100%;
-     height: 18%;
- 
-     display: flex;
-     justify-content: center;
- 
-     gap: 10%;
-   }
-     .pari_equipe {
-       width: 10%;
-       height: 80%;
- 
-       display: flex;
-       justify-content: center;
-       align-items: center;
- 
-       font-size: 125%;
-       font-weight: 500;
- 
-       text-decoration: none;
-       color:black;
- 
-       background-color: rgba(224, 224, 224, 0.802);
-     }
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  #bouton {
+      position: relative;
+      top: 5vh;
+      z-index: 1;
+      width: 60vw;
+      height: 5vh;
+      
+      display: flex;
+
+      .match {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          height: 100%;
+          padding: 0 15px;
+
+          font-size: 115%;
+          font-weight: 500;
+
+          background-color: #ffffff;
+          color: rgb(255, 0, 0);
+
+          &:hover {
+              background-color: #000000;
+              color: yellow;
+              cursor: pointer;
+          }
+      }
+
+      #match {
+          display: none;
+
+          &:checked + .match{
+              background-color: #ff0000;
+              color: rgb(255, 255, 255);
+          }
+        }
+
+      .stats {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          height: 100%;
+          padding: 0 15px;
+
+          font-size: 115%;
+          font-weight: 500;
+
+          background-color: #ffffff;
+          color: rgb(255, 0, 0);
+
+          &:hover {
+              background-color: #000000;
+              color: yellow;
+              cursor: pointer;
+          }
+      }
+
+      #stats {
+          display: none;
+
+          &:checked + .stats{
+              background-color: #ff0000;
+              color: rgb(255, 255, 255);
+          }
+        }
+        
+      .billeterie {
+          padding: 15px 15px;
+      
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      
+          background-color: #ffffff;
+      
+          font-size: 115%;
+          font-weight: 500;
+          
+          text-decoration: none;
+          color: rgb(255, 0, 0);
+
+          border: none;
+
+          &:hover {
+              background-color: #000000;
+              color: yellow;
+          }
+      }
+  }
+}
+
+
+#rencontre {
+  width: 60vw;
+  height: 60vh;
+
+  background-color: white;
+
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245);
+
+  .espace {
+      height:5vh;
+  }
+}
+
+
+.info_horaire {
+  width: 100%;
+  height: 25%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .info_horaire img {
+    height: 70%;
+  }
+
+.date {
+  width: 40%;
+  height: 100%;
+
+  font-size: 120%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.date span {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  height: auto;
+  font-weight: 600;
+}
+
+#equipe {
+  width: 100%;
+  height: 65%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#logo_equipe {
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .logo_equipe {
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 400%;
+    font-weight: 700;
+  }
+    .logo_equipe img {
+      width: 80%;
+    }
+
+
+#nom_equipe {
+  width: 100%;
+  height: 10%;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 20%;
+  margin-bottom: 2%;
+}
+  .nom_equipe {
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 140%;
+    font-weight: 600;
+  }
+
+
+#pari_equipe {
+  width: 100%;
+  height: 18%;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 10%;
+}
+  .pari_equipe {
+    width: 10%;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 125%;
+    font-weight: 500;
+
+    text-decoration: none;
+    color:black;
+
+    background-color: rgba(224, 224, 224, 0.802);
+  }
+
+
+
+
+
+/*------------------- statistiques -------------------*/
+
+
+  #stats_rencontre {
+      display: none;
+
+      width: 60vw;
+      height: 60vh;
+  
+      background-color: white;
+  
+      box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.245);
+
+      .espace {
+          height:5vh;
+      }
+  
+      .stats_rencontre {
+          display: flex;
+          justify-content: center;
+
+          width: 60vw;
+          height: 60vh;
+  
+          .equipe_dom, .equipe_ext {
+              height: 55vh;
+              width: 15%;
+
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+
+              font-size: 110%;
+              font-weight: 600;
+
+              p {
+                font-size: 120%;
+              }
+
+              img {
+                  height: 40%;
+              }
+          }
+          .barre_statistiques {
+              height: 55vh;
+              width: 60%;
+  
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+
+              .barre_stat {
+                  height: 10vh;
+                  width: 85%;
+  
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+  
+                  transform: skew(-15deg, 0deg);
+  
+                  p {
+                      font-size: 110%;
+                      font-weight: 500;
+  
+                      color: #000000;
+                      text-align: center;
+  
+                      transform: skew(15deg, 0deg);
+  
+                      margin-bottom: 1%;
+                  }
+  
+                  .progress_barre1, .progress_barre2, .progress_barre3, .progress_barre4, .progress_barre5{
+                      width: 100%;
+                      height: 40%;
+              
+                      background-color: yellow;
+                      overflow: hidden;
+  
+                      .progress1, .progress2, .progress3, .progress4, .progress5 {
+                        width: 0;
+                        height: 100%;
+                        
+                        background-color: #ff0000;
+  
+                        transition: width 1s ease-out; /* Animation de transition sur la propriété 'width' pendant 1 seconde avec une fonction d'interpolation 'ease' */
+                      }
+                  } 
+              }
+          }   
+      }
+  }
+
+
  
  
  /*---------------------- grille articles ------------------------*/

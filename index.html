@@ -12,6 +12,9 @@
 
     <script src="js/menuDeroulant.js" defer></script>
     <script src="js/slide.js" defer></script>
+    <script src="js/match.js" defer></script>
+    <script src="js/matchs.js" defer></script>
+    <script src="js/barre.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,10 +122,24 @@
 
     <section id="prochain_match">
 
+        <div id="bouton">
+            <input type="checkbox" id="match" name="match" checked>
+            <label for="match" class="match">Prochain match</label>
+
+            <input type="checkbox" id="stats" name="stats">
+            <label for="stats" class="stats">Statiqtiques</label>
+
+            <a href="" class="billeterie">Billeterie</a>
+        </div>
+
+
+
         <div id="rencontre">
 
-            <p id="match" class="prochain_match">Prochain match</p>
+            <div class="espace">
 
+            </div>
+            
             <div class="info_horaire">
                 <p class="date">Ligue 1 Uber Eat
                     <br> <br>
@@ -161,6 +178,67 @@
 
             </div>
 
+        </div>
+
+
+        <div id="stats_rencontre">
+
+            <div class="espace">
+
+            </div>
+            <div class="stats_rencontre">
+    
+                    <div class="equipe_dom">
+                        <img src="asset/img/Logo_RC_Lens_ombre.svg" alt="">
+                        <p>RC Lens</p>
+                    </div>
+    
+                        <div class="barre_statistiques">
+        
+                            <div class="barre_stat">
+                                <p>POSSESSION</p>
+                                <div class="progress_barre1">
+                                    <div class="progress1"></div>
+                                </div>
+                            </div>
+                    
+                            <div class="barre_stat">
+                                <p>TIRS</p>
+                                <div class="progress_barre2">
+                                    <div class="progress2"></div>
+                                </div>
+                            </div>
+        
+                            <div class="barre_stat">
+                                <p>TIRS CADRES</p>
+                                <div class="progress_barre3">
+                                    <div class="progress3"></div>
+                                </div>
+                            </div>
+        
+                            <div class="barre_stat">
+                                <p>ARRETS</p>
+                                <div class="progress_barre4">
+                                    <div class="progress4"></div>
+                                </div>
+                            </div>
+        
+                            <div class="barre_stat">
+                                <p>FAUTES</p>
+                                <div class="progress_barre5">
+                                    <div class="progress5"></div>
+                                </div>
+                            </div>
+        
+                        </div>
+    
+                    <div class="equipe_ext">
+                        <img src="asset/img/Logo_RC_Lens_ombre.svg" alt="">
+                        <p>RC Lens</p>
+                    </div>
+    
+            </div>
+            
         </div>
 
     </section>
@@ -353,6 +431,7 @@
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 
 </html>
