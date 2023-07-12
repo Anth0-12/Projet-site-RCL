@@ -11,13 +11,13 @@
      background-repeat: repeat-y;
  }
  
- header, #menu, #logo {
+ header {
      height: 10vh;
  
      position: sticky;
      top: 0;
  
-     z-index: 1000;
+     z-index: 100;
  
      background-color: white;
 
@@ -27,10 +27,13 @@
       
           justify-items: center;
           align-items: center;
+          
+          background-color: white;
       
           box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.375);
 
           #logo {
+              height: 10vh;
                width: 50%;
            
                display: flex;
@@ -51,148 +54,89 @@
            }
                
            
-           #menu {
-               width: 100%;
-           
-               display: flex;
-               justify-content: center;
-               align-items: center;
+           #menu-icon {
+            display: block;
+            cursor: pointer;
+            
+            .bar {
+              position: relative;
+              left: 20%;
 
-               #hamburger[type=checkbox]:before {
-                    content: "";
-                    height: 20px;
-                    width: 100%;
+              display: block;
+
+              width: 40px;
+              height: 3px;
+
+              background-color: #ff0000;
+
+              margin-bottom: 5px;
+
+              transition: transform 0.3s ease-in-out;
+            }
+          }
+          
+          
+          #menu-icon.open .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+          }
+          
+          #menu-icon.open .bar:nth-child(2) {
+            opacity: 0;
+          }
+          
+          #menu-icon.open .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+          }
+          
+          .menu {
+              display: none;
+              flex-direction: column;
+
+              background-color: #ffffff;
+              box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.375);
+             
+              height: 25vh;
+              width: 12%;
+
+              position: absolute;
+              z-index: -1;
+              top: 10vh;
+              left: 11%;
+
+              li {
+                height: 5vh;
+                width: 100%;
+                list-style: none;
                 
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                
-                    gap: 8px;
-                
-                    background-color: white;
-                
-                    border: 0px;
-                    outline: none !important;
-                    transition: 0.5s;
+                a {
+                  height: 5vh;
+                  width: 100%;
+
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  text-decoration: none;
+                  color: #000000;
+                  
+                  font-size: 110%;
+                  transition: 0.3s;
+
+                  &:hover {
+                    color: yellow;
+                    background-color: black;
+                    transition: 0.3s;
+                  }
                 }
-                
-                    label {
-                        display: block;
-                        background-color:transparent;
-                        
-                        width: 8%;
-                        height: 50px;
-                
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                
-                        gap: 8px;
-                
-                        position: relative;
-                        right: 8%;
-                
-                        cursor: pointer;
-
-                        span {
-                           height: 4px;
-                           width: 100%;
-                   
-                           background-color: rgb(255, 0, 0);
-                   
-                           border-radius: 10px;
-                         }
-                    }
-                
-                     #hamburger:checked + label span:nth-child(1) {
-                        transform: rotate(45deg) translate(8px, 9px);
-                        transition: 0.5s;
-                    }
-                     #hamburger:checked + label span:nth-child(3) {
-                        transform: rotate(-45deg) translate(7px, -9px);
-                        transition: 0.5s;
-                    }
-                     #hamburger:checked + label span:nth-child(2) {
-                        opacity: 0;
-                        transition: 0.5s;
-                    }
-                
-                        #hamburger + label span:nth-child(1) {
-                            transform: rotate(0deg);
-                            transition: 0.5s;
-                        }
-                        #hamburger + label span:nth-child(3) {
-                            transform: rotate(0deg);
-                            transition: 0.5s;
-                        }
-                        #hamburger + label span:nth-child(2) {
-                            opacity: 100;
-                            transition: 0.5s;
-                        }
-                        
-                
-                #menuDeroulant {
-                    width: 50%;
-                    height: 35vh;
-                
-                    position: absolute;
-                    top: 10vh;
-                    left: 17%;
-                    z-index: 900;
-                
-                    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.375);
-                
-                    background-color: white;
-
-                    ul {
-                       list-style: none;
-               
-                       width: 100%;
-                       height: 35vh;
-
-                       li{
-                          width: 100%;
-                          height: 7vh;
-              
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-              
-                          transition: 0.3s;
-
-                          a {
-                              width: 100%;
-                              height: 100%;
-                              
-                              text-decoration: none;
+              }
+            }
+            .menu.open {
+              display: flex;
+            }
           
-                              display: flex;
-                              align-items: center;
-                              justify-content: center;
           
-                              color: black;
           
-                              transition: 0.3s;
-                          }
-                          a:hover {
-                               color: rgb(234, 251, 0);
-                               transition: 0.3s;
-                           }
-                      }
-                      li:hover{
-                          background-color: rgb(0, 0, 0);
-                          transition: 0.3s;
-                      }
-                   }
-                }
-                    .drop {
-                         display: none;
-                    }
-                         .show {
-                              display:block;
-                         }
-           }
-           
+          
            
            #connexion {
                width: 100%;
@@ -202,7 +146,7 @@
                align-items: center;
                gap: 30px;
            
-               font-size: 120%;
+               font-size: 110%;
 
                a {
                     cursor: pointer;

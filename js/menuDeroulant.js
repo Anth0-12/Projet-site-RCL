@@ -1,9 +1,12 @@
-document.getElementById("hamburger").onclick = function() {deroulerMenu(), rotation()};
-
-function deroulerMenu() {
-    document.getElementById("menuDeroulant").classList.toggle("show");
-}
-
+window.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.querySelector('#menu-icon');
+    const menu = document.querySelector('.menu');
+  
+    menuIcon.addEventListener('click', function() {
+      menu.classList.toggle('open');
+      menuIcon.classList.toggle('open');
+    });
+  });
 
 
     
