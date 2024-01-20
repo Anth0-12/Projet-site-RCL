@@ -23,3 +23,11 @@ checkbox2.addEventListener('change', function() {
     } 
  }
 );
+
+//sur le clique, changer couleur des checkbox
+$('input[type="checkbox"]').change(function(){
+    console.log($(this).is(':checked'));
+    if($(this).is(':checked')){
+      $(this).siblings('input[type="checkbox"]').attr('checked', false);
+    }
+  });
