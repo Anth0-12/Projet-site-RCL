@@ -1273,3 +1273,42 @@ footer {
     }
   }
 }
+
+
+/*----------------- fin footer ----------------*/
+
+
+/*----------------- calendrier ----------------*/
+h1 {
+  margin: auto;
+
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: white;
+  
+}
+#grid {
+  display: grid;
+  grid-template-columns: repeat(5, 18%);
+  grid-template-rows: repeat(10, 20vh);
+
+  justify-content: center;
+
+  #calendrier {
+    margin: 10px;
+
+    background-color: white;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+}
