@@ -1291,15 +1291,18 @@ h1 {
   background-color: white;
   
 }
-#grid {
-  display: grid;
-  grid-template-columns: repeat(5, 18%);
-  grid-template-rows: repeat(10, 15vh);
-
+#liste {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  
 
   #calendrier {
-    margin: 10px;
+    height: 7vh;
+    width: 30%;
+
+    margin: 5px;
 
     background-color: white;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
@@ -1308,7 +1311,6 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2px;
   }
   
 }
