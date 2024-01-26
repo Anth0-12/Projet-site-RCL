@@ -14,7 +14,7 @@
 
 const ul = document.querySelector('ul');
 
-const url = "https://football536.p.rapidapi.com/squads?team_id=4";
+const url = "https://football536.p.rapidapi.com/squads?team_id=90";
 const apiKey = "836bc2c2f5msh5b21ebbc27a63c3p1cee86jsn0d0f5dafa7e5";
 
 fetch(url, {
@@ -32,12 +32,16 @@ fetch(url, {
 })
 .then(data => {
   // Traitez les données renvoyées par l'API
-  for (let i = 0; i < data.data.length; i++) {
-    const li = document.createElement('li');
-    li.innerText = data.data[i].players[i].full_name
-    li.setAttribute("id", "calendrier");
-    ul.appendChild(li);
-    }
+  // Accéder à la liste des joueurs dans les données JSON
+        const joueurs = data.data[0].players;
+
+        // Parcourir la liste des joueurs et créer un élément li pour chaque joueur
+        joueurs.forEach(function(player) {
+            const li = document.createElement('li');
+            li.innerHTML = player.full_name +  "<br>" + player.position + "<br>" + player.nationality;
+            li.setAttribute("id", "calendrier");
+            ul.appendChild(li);
+        });
 })
 .catch(error => {
   // Gérez l'erreur en conséquence
